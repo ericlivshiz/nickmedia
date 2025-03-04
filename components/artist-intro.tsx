@@ -29,7 +29,7 @@ export function ArtistIntro() {
 
           <div className="relative aspect-square overflow-hidden rounded-lg md:aspect-[4/3]">
             <Image
-              src="/placeholder.svg?height=800&width=600"
+              src="/assets/placeholder.svg?height=800&width=600"
               alt="Nick Media - Artist at work"
               fill
               className="object-cover"

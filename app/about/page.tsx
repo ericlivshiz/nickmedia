@@ -19,7 +19,7 @@ export default function AboutPage() {
           <div className="mb-12 grid gap-8 md:grid-cols-2 md:items-center">
             <div className="relative aspect-square overflow-hidden rounded-lg">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/assets/placeholder.svg?height=600&width=600"
                 alt="Nick Media - Artist Portrait"
                 fill
                 className="object-cover"
