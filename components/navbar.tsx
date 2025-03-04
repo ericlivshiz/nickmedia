@@ -35,7 +35,7 @@ export function Navbar() {
           isScrolled ? "bg-black/90 backdrop-blur-sm" : "bg-transparent"
         }`}
       >
-        <div className="container flex h-20 items-center justify-between px-4">
+        <div className="container flex h-20 items-center justify-between px-4 mx-auto">
           <Link href="/" className="text-2xl font-bold">
             <span className="text-red-600">NICK</span>MEDIA
           </Link>

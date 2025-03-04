@@ -28,7 +28,7 @@ export default function Home() {
             height={640}
           />
         </div>
-        <div className="container relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
+        <div className="container relative z-10 flex h-full flex-col items-center justify-center px-4 text-center mx-auto">
           <h1 className="mb-4 text-5xl font-extrabold tracking-tight md:text-7xl">
             <span className="text-red-600">NICK</span>MEDIA
           </h1>
@@ -58,7 +58,7 @@ export default function Home() {
 
       {/* Featured Artwork */}
       <section className="bg-zinc-900 py-20">
-        <div className="container px-4">
+        <div className="container px-4 mx-auto">
           <h2 className="mb-12 text-center text-3xl font-bold tracking-tight md:text-4xl">
             Featured <span className="text-red-600">Artwork</span>
           </h2>
@@ -76,7 +76,7 @@ export default function Home() {
 
       {/* Testimonials */}
       <section className="bg-zinc-900 py-20">
-        <div className="container px-4">
+        <div className="container px-4 mx-auto">
           <h2 className="mb-12 text-center text-3xl font-bold tracking-tight md:text-4xl">
             What <span className="text-red-600">Collectors</span> Say
           </h2>
@@ -86,7 +86,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-red-900 to-black py-20">
-        <div className="container px-4 text-center">
+        <div className="container px-4 text-center mx-auto">
           <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">
             Ready to Transform Your Space?
           </h2>
