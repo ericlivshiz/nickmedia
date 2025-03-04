@@ -4,6 +4,8 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function ArtistIntro() {
+  const message = "I'm the creative force behind some of the most iconic rap cover art in the industry. With a passion for urban aesthetics and street culture, I've spent years perfecting my craft and developing a signature style that captures the raw energy of hip-hop."
+  const message2 = "My work has been featured on albums for major artists, and now I'm bringing that same artistic vision to limited edition poster prints that you can own and display."
   return (
     <section className="bg-black py-20">
       <div className="container px-4">
@@ -13,13 +15,10 @@ export function ArtistIntro() {
               Meet the <span className="text-red-600">Artist</span>
             </h2>
             <p className="mb-4 text-gray-300">
-              I'm the creative force behind some of the most iconic rap cover art in the industry. With a passion for
-              urban aesthetics and street culture, I've spent years perfecting my craft and developing a signature style
-              that captures the raw energy of hip-hop.
+              {message}
             </p>
             <p className="mb-6 text-gray-300">
-              My work has been featured on albums for major artists, and now I'm bringing that same artistic vision to
-              limited edition poster prints that you can own and display.
+              {message2}
             </p>
             <Button asChild className="bg-red-600 hover:bg-red-700">
               <Link href="/about">

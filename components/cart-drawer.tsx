@@ -10,7 +10,7 @@ export function CartDrawer() {
   const { cartItems, removeFromCart, updateQuantity, isCartOpen, setIsCartOpen } = useCart()
 
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0)
-
+  const message = "Looks like you haven't added any posters to your cart yet. "
   return (
     <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
       <SheetContent className="flex w-full flex-col bg-zinc-900 sm:max-w-md">
@@ -25,7 +25,7 @@ export function CartDrawer() {
           <div className="flex flex-1 flex-col items-center justify-center">
             <ShoppingCart className="mb-4 h-16 w-16 text-gray-600" />
             <h3 className="mb-2 text-xl font-medium">Your cart is empty</h3>
-            <p className="mb-6 text-center text-gray-400">Looks like you haven't added any posters to your cart yet.</p>
+            <p className="mb-6 text-center text-gray-400">{message}</p>
             <Button className="bg-red-600 hover:bg-red-700" onClick={() => setIsCartOpen(false)}>
               Continue Shopping
             </Button>

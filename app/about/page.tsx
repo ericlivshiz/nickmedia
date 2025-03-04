@@ -5,6 +5,9 @@ import { Instagram, Twitter, Youtube } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function AboutPage() {
+  const intro = "From the streets to the digital canvas, I've been creating iconic rap cover art that captures the raw essence of urban culture and the hip-hop movement."
+  const message2 = "My posters are more than just merchandise - they're collectible art pieces that bring the energy and authenticity of rap culture into your space."
+  const message = "With over a decade of experience working with some of the biggest names in the industry, my artwork has become synonymous with authentic street credibility and artistic innovation in the rap scene."
   return (
     <div className="min-h-screen bg-black pb-20 pt-24">
       <div className="container px-4">
@@ -26,12 +29,10 @@ export default function AboutPage() {
             <div>
               <h2 className="mb-4 text-2xl font-bold">@nickmediasm</h2>
               <p className="mb-4 text-gray-300">
-                From the streets to the digital canvas, I've been creating iconic rap cover art that captures the raw
-                essence of urban culture and the hip-hop movement.
+                {intro}
               </p>
               <p className="mb-6 text-gray-300">
-                With over a decade of experience working with some of the biggest names in the industry, my artwork has
-                become synonymous with authentic street credibility and artistic innovation in the rap scene.
+                {message}
               </p>
 
               <div className="flex space-x-4">
@@ -86,8 +87,7 @@ export default function AboutPage() {
               visuals that are as powerful and impactful as the music itself.
             </p>
             <p>
-              My posters are more than just merchandise - they're collectible art pieces that bring the energy and
-              authenticity of rap culture into your space.
+              {message2}
             </p>
           </div>
 
