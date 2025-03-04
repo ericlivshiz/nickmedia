@@ -1,101 +1,110 @@
+import Link from "next/link";
+import { ArrowRight, ShoppingCart } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import FeaturedArtwork from "@/components/featured-artwork";
+import { ArtistIntro } from "@/components/artist-intro";
+import { TestimonialSlider } from "@/components/testimonial-slider";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex min-h-screen flex-col bg-black text-white">
+      {/* Hero Section */}
+      <section className="relative h-[80vh] w-full overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90">
+          <Image
+            src="/assets/red-black-gif.gif"
+            alt="Hero Image"
+            className="hero-image hero-image-small absolute inset-0 object-cover w-full h-full opacity-50"
+            width={640}
+            height={640}
+          />
+          <Image
+            src="/assets/red-black-img.jpg"
+            alt="Hero Image"
+            className="hero-image hero-image-large absolute inset-0 object-cover w-full h-full opacity-50"
+            width={640}
+            height={640}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="container relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
+          <h1 className="mb-4 text-5xl font-extrabold tracking-tight md:text-7xl">
+            <span className="text-red-600">NICK</span>MEDIA
+          </h1>
+          <p className="mb-8 max-w-2xl text-lg text-gray-300">
+            Premium rap cover art posters from the streets to your walls
+          </p>
+          <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+            <Button asChild size="lg" className="bg-red-600 hover:bg-red-700">
+              <Link href="/shop">
+                Shop Collection <ShoppingCart className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="bg-black border-gray-700 text-white"
+            >
+              <Link href="/about">
+                About the Artist{" "}
+                <ArrowRight className="ml-2 h-5 w-5 hover:bg-black" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Artwork */}
+      <section className="bg-zinc-900 py-20">
+        <div className="container px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight md:text-4xl">
+            Featured <span className="text-red-600">Artwork</span>
+          </h2>
+          <FeaturedArtwork />
+          <div className="mt-12 text-center">
+            <Button asChild className="bg-red-600 hover:bg-red-700">
+              <Link href="/shop">View All Posters</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Artist Intro */}
+      <ArtistIntro />
+
+      {/* Testimonials */}
+      <section className="bg-zinc-900 py-20">
+        <div className="container px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight md:text-4xl">
+            What <span className="text-red-600">Collectors</span> Say
+          </h2>
+          <TestimonialSlider />
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gradient-to-r from-red-900 to-black py-20">
+        <div className="container px-4 text-center">
+          <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">
+            Ready to Transform Your Space?
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-300">
+            Get exclusive rap cover art posters shipped directly to your door.
+            Limited editions available.
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="bg-white text-black hover:bg-gray-200"
+          >
+            <Link href="/shop">
+              Shop Now <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
     </div>
   );
 }
