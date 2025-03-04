@@ -87,7 +87,7 @@ export function TestimonialSlider() {
               </div>
 
               <blockquote className="mb-4 text-gray-300 text-sm sm:text-base max-w-full sm:max-w-xl mx-auto">
-                "{testimonial.text}"
+                &quot;{testimonial.text}&quot;
               </blockquote>
 
               <div>

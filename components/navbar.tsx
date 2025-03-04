@@ -11,7 +11,7 @@ import { CartDrawer } from "@/components/cart-drawer"
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { cartItems, isCartOpen, setIsCartOpen } = useCart()
+  const { cartItems, setIsCartOpen } = useCart()
 
   const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0)
 
